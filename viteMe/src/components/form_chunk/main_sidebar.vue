@@ -5,12 +5,14 @@
           <router-link to="/">
             <ourButton mylabel = "Home" />
           </router-link>
-          <ourButton mylabel = "Joke List" />
+          <router-link to="/fulljokelist">
+            <ourButton mylabel = "Joke List" />
+          </router-link>
           <ourButton mylabel = "Get a Random Joke" />
           <ourButton mylabel = "Get a Joke By ID" />
-          <ourButton mylabel = "Joke Stats" />
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link>
+          <router-link to="/stats">
+            <ourButton mylabel = "Joke Stats" />
+          </router-link>
       </Sidebar>
       <Button icon="pi pi-arrow-right" @click="visible = true"/>
   </div>
