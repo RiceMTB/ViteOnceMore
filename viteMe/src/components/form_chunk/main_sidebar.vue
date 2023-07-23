@@ -1,16 +1,22 @@
 <template>
-  <div class="card flex justify-content-left">
+  <div class="card flex justify-content-center">
       <Sidebar v-model:visible="visible">
-          <h2>Sidebar</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h2>Menu</h2>
+          <ourButton mylabel = "Go Here" />
+          <ourButton mylabel = "Go There" />
       </Sidebar>
-      <Button icon="pi pi-arrow-right" @click="visible = true" />
+      <Button icon="pi pi-arrow-right" @click="visible = true"/>
   </div>
 </template>
 
-<script>
-export default{ 
-  name:'sidebarmain'
-
-}
+<script setup>
+import { ref } from "vue";
+import ourButton from '../widgit/ourButton.vue'
+const visible = ref(false);
 </script>
+
+<style scoped>
+.ourbutton{ 
+  display: block;
+}
+</style>
