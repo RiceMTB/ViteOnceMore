@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import './style.css'
 import App from './App.vue';
-//import router from 'vue-router';
+import router from './router/router_index';
 import PrimeVue from 'primevue/config';
 
 import 'primevue/resources/primevue.min.css';
@@ -29,7 +29,7 @@ import Calendar from 'primevue/calendar';
 const app = createApp(App);
 
 app.use(PrimeVue);
-// app.use(router);
+app.use(router);
 app.component('Panel', Panel);
 app.component('Toolbar', Toolbar);
 app.component('Button', Button);
