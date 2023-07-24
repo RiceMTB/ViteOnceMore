@@ -1,31 +1,36 @@
 <template>
     <div class="card">
-        <DataTable :value="products" tableStyle="min-width: 50rem">
+        <DataTable :value="jokes" tableStyle="min-width: 50rem">
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"></Column>
         </DataTable>
     </div>
 </template>
 
 <script>
-import { ProductService } from '../service/ProductService';
 
 export default {
     data() {
         return {
-            products: null,
-            columns: null
+            jokes: null,
+            
         };
     },
     created() {
         this.columns = [
-            { field: 'code', header: 'Code' },
-            { field: 'name', header: 'Name' },
-            { field: 'category', header: 'Category' },
-            { field: 'quantity', header: 'Quantity' }
-        ];
+            { field: 'JOKE_ID', header: 'Joke ID' },
+            { field: 'JOKE', header: 'Joke' },
+            { field: 'PUNCHLINE', header: 'Punchline' },
+        ]
+    },
+    methods: {
+      async getData() {
+        const res = await fetch("http://localhost:8090/api/alljokes");
+        const finalRes = await res.json();
+        this.jokes = finalRes;
+      }
     },
     mounted() {
-        ProductService.getProductsMini().then((data) => (this.products = data));
+      this.getData()
     }
 };
 </script>
