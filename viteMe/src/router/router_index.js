@@ -20,6 +20,11 @@ const routes = [
     path: '/fulljokelist',
     name: 'JokeList',
     component: () => import( '../forms/joke_list.vue')
+  },
+  {
+    path: '/randomjoke',
+    name: 'RandomJoke',
+    component: () => import( '../views/randomJoke.vue')
   }
 ]
 const router = createRouter({

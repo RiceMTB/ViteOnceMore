@@ -8,7 +8,10 @@
           <router-link to="/fulljokelist">
             <ourButton mylabel = "Joke List" />
           </router-link>
-          <ourButton mylabel = "Get a Random Joke" />
+          <router-link to="/randomjoke">
+            <ourButton mylabel = "Get a Random Joke" />
+          </router-link>
+          
           <ourButton mylabel = "Get a Joke By ID" />
           <router-link to="/stats">
             <ourButton mylabel = "Joke Stats" />
