@@ -1,10 +1,13 @@
 <template>
-    <div class="card">
-        <DataTable :value="jokes" tableStyle="min-width: 50rem">
+    <div class="jokeList">
+        <DataTable :value="jokes" paginator :rows="15" :rowsPerPageOptions="[15, 30, 45, 60]" stripedRows tableStyle="min-width: 50rem">
             <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"></Column>
         </DataTable>
     </div>
 </template>
+
+
+
 
 <script>
 
@@ -27,10 +30,19 @@ export default {
         const res = await fetch("http://localhost:8090/api/alljokes");
         const finalRes = await res.json();
         this.jokes = finalRes;
-      }
+      },
+
     },
     mounted() {
       this.getData()
     }
 };
 </script>
+<style scoped>
+div{ 
+    padding: 0%;
+    max-height: 600px;
+    width: 1200px;
+    
+}
+</style>

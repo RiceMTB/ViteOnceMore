@@ -24,6 +24,7 @@ import my_sidebar from './components/form_chunk/main_sidebar.vue'
     background-color: #333;
     color: #fff;
     padding: 0px;
+    z-index: 1;
   } 
   .thefooter {
     position: fixed;
@@ -33,5 +34,6 @@ import my_sidebar from './components/form_chunk/main_sidebar.vue'
     background-color: #333;
     color: #fff;
     padding: 0px;
+    z-index: 1;
   } 
 </style>
