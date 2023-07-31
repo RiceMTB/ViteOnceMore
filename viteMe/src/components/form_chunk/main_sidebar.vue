@@ -2,8 +2,8 @@
   <div class="card flex justify-content-center">
       <Sidebar v-model:visible="visible">
           <h2>Navigation Menu</h2>
-          <router-link to="/">
-            <ourButton mylabel = "Home" />
+          <router-link to="/">Home
+            <!-- <ourButton mylabel = "Home" /> -->
           </router-link>
           <router-link to="/fulljokelist">
             <ourButton mylabel = "Joke List" />
@@ -11,10 +11,12 @@
           <router-link to="/randomjoke">
             <ourButton mylabel = "Get a Random Joke" />
           </router-link>
-          
           <ourButton mylabel = "Get a Joke By ID" />
           <router-link to="/stats">
             <ourButton mylabel = "Joke Stats" />
+          </router-link>
+          <router-link to="/addJoke">
+            <ourButton mylabel = "New Joke" />
           </router-link>
       </Sidebar>
       <Button icon="pi pi-arrow-right" @click="visible = true"/>

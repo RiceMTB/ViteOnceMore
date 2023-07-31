@@ -25,7 +25,13 @@ const routes = [
     path: '/randomjoke',
     name: 'RandomJoke',
     component: () => import( '../views/randomJoke.vue')
-  }
+  },
+  {
+    path: '/addJoke',
+    name: 'addJoke',
+    // my_title: 'This is a Test' // trying to get the pass title child to parent
+    component: () => import( '../forms/joke_entry.vue')
+  },
 ]
 const router = createRouter({
 //  history: createWebHistory(process.env.BASE_URL),

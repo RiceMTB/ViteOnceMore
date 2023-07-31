@@ -1,19 +1,20 @@
-<script setup>
-import my_header from './components/form_chunk/primeHeader.vue'
-import my_sidebar from './components/form_chunk/main_sidebar.vue'
-</script>
-
 <template>
   <div>
-    <my_header class="theHeader"/>
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
+    <!-- <my_header class="theHeader"/>
+    <h1>{{this.$route.name}}</h1>
     <router-view />
-    <my_sidebar/>
-    <my_header class="thefooter"/>
+    <my_sidebar/> -->
+    <my_footer class="thefooter"/>
   </div>
 
 </template>
+
+<script setup>
+//imports
+import my_header from './components/form_chunk/primeHeader.vue';
+import my_footer from './components/form_chunk/our_footer.vue';
+import my_sidebar from './components/form_chunk/main_sidebar.vue';
+</script>
 
 <style scoped>
  .theHeader {
