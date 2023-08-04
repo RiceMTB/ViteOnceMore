@@ -15,33 +15,34 @@
                 </p>
             </template>
             <template #footer>
-                <Button icon="pi pi-replay" label="New Joke" severity="secondary" style="margin-left: 0.5em" @click="reload()"/>
+                <Button icon="pi pi-replay" label="New Joke" severity="secondary" style="margin-left: 0.5em" @click="getData()"/>
             </template>
         </Card>
     </div>
 </template>
 
 <script>
+    import JokeData from '../data_service/JokeDataService.js'
     export default {
-        
         data() {
             return {
                 joke: [],
-                
             };
-        },
+        }, //End of Data
+
         methods: {
+            // getData(){ 
+            //     this.joke = JokeData.getrandom()
+            // }
             async getData() {
                 const res = await fetch("http://localhost:8090/api/randomjoke");
                 const finalRes = await res.json();
                 this.joke = finalRes[0];
             },
-            reload(){
-                location.reload(true);
-            },
-        },
+        }, // End of Methods
+
         mounted() {
             this.getData()
-        },
+        }, // End of Mounted
     };
 </script>

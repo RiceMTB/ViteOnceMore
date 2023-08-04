@@ -1,5 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/landing.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import Home from '../views/landing.vue';
+import formTitle from '/src/string_constants/fe_string.js';
 const routes = [
   {
     path: '/',
@@ -24,12 +25,18 @@ const routes = [
   {
     path: '/randomjoke',
     name: 'RandomJoke',
+    meta: { 
+      form_title: formTitle.form_title.random_joke
+    },
     component: () => import( '../views/randomJoke.vue')
+    
   },
   {
     path: '/addJoke',
     name: 'addJoke',
-    // my_title: 'This is a Test' // trying to get the pass title child to parent
+    meta: { 
+      form_title: formTitle.form_title.enter_new_joke
+    },
     component: () => import( '../forms/joke_entry.vue')
   },
 ]

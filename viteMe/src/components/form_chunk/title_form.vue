@@ -1,20 +1,30 @@
 <template> 
-    <head>{{ mylabel }}</head>
+    <div>
+        {{ form_title }} 
+    </div>
 </template>
 
 <script>
-    
     export default{ 
         props:{ 
-        mylabel: String,
+        form_title: String,
         },
         methods:{ 
             getlabel(){ 
-                return this.mylabel
+                return this.form_title
             }   
         }
     }
 </script>
-<style>
-
+<style scoped>
+div{
+    position: fixed;
+    width: 100%;
+    top: 43px;
+    left: 0;
+    font-size: x-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
 </style>

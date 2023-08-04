@@ -1,17 +1,40 @@
-<template>
-
-  <div class="bg-red-500 text-gray-100 p-1 flex justify-content-between lg:justify-content-center align-items-center flex-wrap">
-      <div class="align-items-center lg:flex">
-          <span class="line-height-2">This Will Tell you who can see this</span>
-      </div>
-      <!-- <a v-ripple class="flex align-items-center no-underline justify-content-center border-circle text-gray-50 hover:bg-bluegray-700 cursor-pointer transition-colors transition-duration-150 p-ripple" style="width:2rem; height: 2rem">
-          <i class="pi pi-times"></i>
-      </a> -->
-  </div>
+<template> 
+    
+    <div class = "theHeader">
+        <span>This Will Tell you who can see this</span>
+        
+    </div>
+    <div class = "theMode">
+        <the_mode/>
+    </div>
+    
+    
 </template>
 
-<script>
-export default{ 
+<script setup>
+import the_mode from './my_mode.vue'
 
-}
 </script>
+<style scoped>
+ .theHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f10606;
+    color: #fff;
+    padding: 0px;
+    z-index: 1;
+  }
+  .theMode{
+    font-size: small;
+    position: fixed;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    background-color: #5693e4;
+    color: #fff;
+    padding: 0px;
+    z-index: 1;
+  }
+</style>
