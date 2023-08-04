@@ -1,13 +1,13 @@
-import http from '../baseMid.js'
+import toMiddle from '../baseMid'
 
 class Joke_Data_Service { 
     getAll() { 
-        return http.get('/alljokes')
+        return toMiddle.get('/alljokes')
     };
 
     getrandom() {
         const rando = ""
-        rando = http.get('/randomjoke')
+        rando = toMiddle.get('/randomjoke')
         console.log(rando)
         if (rando === ""){ 
             rando = [{"JOKE_ID":397,"JOKE":"How does a French skeleton say hello?","PUNCHLINE":"Bone-jour.","PUNCHLINE_ID":397}]
