@@ -1,4 +1,4 @@
-import toMiddle from '../baseMid'
+import toMiddle from '../baseMid.js'
 
 class Joke_Data_Service { 
     getAll() { 
@@ -6,13 +6,13 @@ class Joke_Data_Service {
     };
 
     getrandom() {
-        const rando = ""
-        rando = toMiddle.get('/randomjoke')
-        console.log(rando)
-        if (rando === ""){ 
-            rando = [{"JOKE_ID":397,"JOKE":"How does a French skeleton say hello?","PUNCHLINE":"Bone-jour.","PUNCHLINE_ID":397}]
+        try { 
+            const response = toMiddle.get('/randomjoke')
+            return response.data
         }
-        return rando
+        catch(error){ 
+            console.error(error)
+        }
     };
 };
 
