@@ -1,7 +1,18 @@
 <template>
     <div class="jokeList">
-        <DataTable :value="jokes" paginator :rows="15" :rowsPerPageOptions="[15, 30, 45, 60]" stripedRows tableStyle="min-width: 50rem">
-            <Column v-for="col of columns" :key="col.field" :field="col.field" :header="col.header"></Column>
+        <DataTable :value="jokes" 
+            paginator :rows="15" 
+            :rowsPerPageOptions="[15, 30, 45, 60]" 
+            removableSort
+            stripedRows 
+            tableStyle="min-width: 50rem">
+            <Column v-for="col of columns" 
+                :key="col.field" 
+                :field="col.field" 
+                :header="col.header"
+                sortable
+                >
+            </Column>
         </DataTable>
     </div>
 </template>
@@ -15,7 +26,6 @@ export default {
     data() {
         return {
             jokes: null,
-            
         };
     },
     created() {

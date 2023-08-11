@@ -1,7 +1,6 @@
 <template>
   <div>
     <my_header class="theHeader"/>
-    
     <my_title :form_title = this.$route.meta.form_title />
     <router-view />
     <my_sidebar/>
@@ -20,14 +19,4 @@
 
 <style scoped>
 
-  .thefooter {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    padding: 0px;
-    z-index: 1;
-  } 
 </style>

@@ -22,9 +22,11 @@ div{
     width: 100%;
     top: 43px;
     left: 0;
+    background-color: white;
     font-size: x-large;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 15px;
     font-weight: bold;
+    z-index: 1;
 }
 </style>

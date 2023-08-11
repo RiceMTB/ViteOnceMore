@@ -27,6 +27,7 @@ import Textarea from 'primevue/textarea';
 import Calendar from 'primevue/calendar';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
+import ProgressBar from 'primevue/progressbar';
 import ColumnGroup from 'primevue/columngroup';   // optional
 import Row from 'primevue/row';                   // optional
 
@@ -52,6 +53,8 @@ app.component('Editor', Editor);
 app.component('Chips', Chips);
 app.component('Textarea', Textarea);
 app.component('Sidebar', Sidebar)
+app.component('Progressbar', ProgressBar)
 app.directive('tooltip', Tooltip);
+
 
 app.mount('#app');

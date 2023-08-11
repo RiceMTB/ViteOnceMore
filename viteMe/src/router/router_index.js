@@ -20,7 +20,10 @@ const routes = [
   {
     path: '/fulljokelist',
     name: 'JokeList',
-    component: () => import( '../forms/joke_list.vue')
+    component: () => import( '../forms/joke_list.vue'),
+    meta: { 
+      form_title: "Joke List"
+    },
   },
   {
     path: '/randomjoke',
@@ -38,6 +41,22 @@ const routes = [
       form_title: formTitle.form_title.enter_new_joke
     },
     component: () => import( '../forms/joke_entry.vue')
+  },
+  {
+    path: '/bitCoin',
+    name: 'bitCoin',
+    meta: { 
+      form_title: formTitle.form_title.bit_coin
+    },
+    component: () => import( '../views/bitcoinprice.vue')
+  },
+  {
+    path: '/jokeByID',
+    name: 'jokeByID',
+    meta: { 
+      form_title: "Get a joke by ID"
+    },
+    component: () => import( '../forms/jokebyID.vue')
   },
 ]
 const router = createRouter({

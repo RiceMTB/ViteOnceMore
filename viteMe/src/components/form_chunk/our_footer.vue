@@ -21,3 +21,16 @@ export default {
 
 };
 </script>
+<style scoped>
+div{ 
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f10606;
+  color: #fff;
+  padding: 0px;
+  z-index: 1;
+  justify-content:center;
+}
+</style>

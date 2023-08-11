@@ -19,6 +19,7 @@ const header_statement ={
 const form_title = { 
     enter_new_joke: "Add New Joke",
     random_joke: "Get a Random Joke",
+    bit_coin: "Current BitCoin Price"
 };
 
 
