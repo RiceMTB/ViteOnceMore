@@ -22,7 +22,6 @@
 </template>
 
 <script>
-    import JokeData from '../data_service/JokeDataService.js'
     export default {
         data() {
             return {
@@ -32,7 +31,8 @@
 
         methods: {
             // getData(){ 
-            //     this.joke = JokeData.getrandom()
+            //     JokeData.getData()
+            //     this.joke = JokeData.randomJoke
             // }
             async getData() {
                 const res = await fetch("http://localhost:8090/api/randomjoke");
